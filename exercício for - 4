@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int pessoas = 3;
+        double somaalturas = 0;
+        int contador = 0;
+
+        for (int i = 1; i <= pessoas; i++) {
+
+            System.out.println("Pessoa " + i);
+
+            System.out.print("Digite sua idade: ");
+            int idade = sc.nextInt();
+
+            System.out.print("Digite sua altura: ");
+            double altura = sc.nextDouble();
+
+            if (idade >= 50) {
+                somaalturas += altura;
+                contador++;
+            }
+        }
+        if (contador > 0) {
+            double media = somaalturas / contador;
+            System.out.printf("A média da altura das pessoas com + de 50 anos é: %.2f", media);
+        } else {
+            System.out.println("Não há pessoas com mais de 50 anos.");
+        }
+        sc.close();
+    }
+}
