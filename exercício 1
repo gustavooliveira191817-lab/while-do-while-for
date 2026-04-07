@@ -1,10 +1,10 @@
-public class MyClass {
-  public static void main(String args[]) {
-    int i = 100;
-    
-    for(i = 100; i <= 200; i++){
-        System.out.print(i + " ");
+public class Main{
+    public static void main(String[]args){
+        int i = 100;
+        while (i<= 200){
+            System.out.print(i + " ");
+            i++;
+        }
+
     }
-    
-  }
 }
