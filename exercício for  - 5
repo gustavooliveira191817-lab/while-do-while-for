@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int alunos = 6;
+
+        int qtdreprovados = 0;
+        int qtdexame = 0;
+        int qtdaprovados = 0;
+
+        double somamedias = 0;
+
+        for (int i = 1; i <= alunos; i++) {
+            System.out.println("Aluno " + i);
+
+            System.out.print("Digite a 1° nota: ");
+            double nota1 = sc.nextDouble();
+
+            System.out.print("Digite a 2° nota: ");
+            double nota2 = sc.nextDouble();
+
+            double media = (nota1 + nota2) / 2;
+            somamedias += media;
+
+            if (media <= 3) {
+                System.out.println("Reprovado.");
+                qtdreprovados++;
+            } else if (media < 7) {
+                System.out.println("Exame.");
+                qtdexame++;
+            } else if (media <= 10) {
+                System.out.println("Aprovado.");
+                qtdaprovados++;
+            } else {
+                System.out.println("Média inválida.");
+            }
+        }
+
+        double mediaSala = somamedias / alunos;
+
+        System.out.println("========== RESULTADOS ==========");
+        System.out.println("Reprovados: " + qtdreprovados);
+        System.out.println("Exame: " + qtdexame);
+        System.out.println("Aprovados: " + qtdaprovados);
+        System.out.printf("Média da sala: %.2f\n", mediaSala);
+        System.out.println("=================================");
+        sc.close();
+    }
+}
