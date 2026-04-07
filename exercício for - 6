@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int eleitores = 4;
+        int somav1 = 0;
+        int somav2 = 0;
+        int somav3 = 0;
+        int somav4 = 0;
+        int somav5 = 0;
+        int somav6 = 0;
+        int totalv1 = 0;
+        int totalv2 = 0;
+        int totalv3 = 0;
+        int totalv4 = 0;
+        int totalv5 = 0;
+        int totalv6 = 0;
+
+        for (int i = 0; i < eleitores ;  i++) {
+            System.out.println("=================================");
+            System.out.println("Em qual candidato vai votar?");
+            System.out.println("Digite 1 para candidato 1.");
+            System.out.println("Digite 2 para candidato 2.");
+            System.out.println("Digite 3 para candidato 3.");
+            System.out.println("Digite 4 para candidato 4.");
+            System.out.println("Digite 5 para voto nulo.");
+            System.out.println("Digite 6 para voto em branco.");
+            System.out.println("Seu voto:");
+            int voto = sc.nextInt();
+            System.out.println("=================================");
+
+            if (voto == 1) {
+                somav1 += totalv1;
+                totalv1 += 1;
+                System.out.println("Você votou no cadidato 1.");
+            } else if (voto == 2) {
+                somav2 += totalv2;
+                totalv2 += 1;
+                System.out.println("Você votou no cadidato 2.");
+            } else if (voto == 3) {
+                somav3 += totalv3;
+                totalv3 += 1;
+                System.out.println("Você votou no cadidato 3.");
+            } else if (voto == 4) {
+                somav4 += totalv4;
+                totalv4 += 1;
+                System.out.println("Você votou no cadidato 4.");
+            } else if (voto == 5) {
+                somav5 += totalv5;
+                totalv5 += 1;
+                System.out.println("Você votou nulo.");
+            } else if (voto == 6) {
+                somav6 += totalv6;
+                totalv6 += 1;
+                System.out.println("Você votou em branco.");
+            }
+            else {
+                System.out.println("Candidato invalido");
+            }
+
+        }
+        System.out.printf("Total de votos candidato 1: %d\n", +totalv1);
+        System.out.printf("Total de votos candidato 2: %d\n", +totalv2);
+        System.out.printf("Total de votos candidato 3: %d\n", +totalv3);
+        System.out.printf("Total de votos candidato 4: %d\n", +totalv4);
+        System.out.printf("Total de votos candidato 5: %d\n", +totalv5);
+        System.out.printf("Total de votos candidato 6: %d\n", +totalv6);
+        int percent = ((totalv5 + totalv6) / eleitores) * 100;
+        System.out.println("Porcentagem de votos nulos e brancos: "+ percent+"%");
+        sc.close();
+    }
+}
