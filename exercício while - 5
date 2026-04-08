@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int numero = 0;
+        while (numero < 10){
+            numero++;
+            int resultado = numero*5;
+            System.out.println(numero+" x 5 = "+resultado);
+
+
+        }
+    }
+}
