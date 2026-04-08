@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+ public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int pares = 0;
+        int impares = 0;
+        int contador = 1;
+
+        while (contador <= 10) {
+            System.out.print("Digite o " + contador + "º número: ");
+            int numero = scanner.nextInt();
+
+            if (numero % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+
+            contador++;
+        }
+
+        System.out.println("Total de pares: " + pares);
+        System.out.println("Total de ímpares: " + impares);
+
+        scanner.close();
+    }
+}
