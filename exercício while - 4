@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int numero = 10;
+        while (numero < 20){
+            numero++;
+            double metade = numero/2;
+            System.out.println("a metade é de "+numero+ " é "+metade);
+
+
+        }
+    }
+}
