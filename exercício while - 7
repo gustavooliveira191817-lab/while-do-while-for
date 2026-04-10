@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner e = new Scanner(System.in);
+        int cont = 1;
+
+        while (cont <= 10) {
+            System.out.println("Informe a altura da " + cont + "° pessoa (em metros):");
+            double alt = e.nextDouble();
+
+            System.out.println("Informe o peso da " + cont + "° pessoa (em kg):");
+            double peso = e.nextDouble();
+
+            double IMC = peso / (alt * alt);
+
+            if (IMC < 18.5) {
+                System.out.println(IMC + " = Abaixo do peso");
+            } else if (IMC <= 24.9) {
+                System.out.println(IMC + " = Peso normal");
+            } else if (IMC <= 29.9) {
+                System.out.println(IMC + " = Sobrepeso");
+            } else {
+                System.out.println(IMC + " = Obesidade");
+            }
+
+            cont++;
+        }
+    }
+}
