@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner e = new Scanner(System.in);
+        String escolha;
+        double total = 0;
+
+        System.out.println("CODIGO | PRODUTO            | PREÇO");
+        System.out.println("01     | CACHORRO QUENTE    | 1,20");
+        System.out.println("02     | BAURU SIMPLES      | 1,30");
+        System.out.println("03     | BAURU COM OVO      | 1,50");
+        System.out.println("04     | HAMBURGUER         | 1,20");
+        System.out.println("05     | CHEESEBURGUER      | 1,40");
+        System.out.println("06     | REFRIGERANTE       | 1,20");
+
+        do {
+            System.out.println("Escolha uma opção (ou 0 para sair): ");
+            escolha = e.nextLine();
+
+            switch (escolha) {
+                case "01":
+                    System.out.println("CACHORRO QUENTE - 1,20");
+                    total += 1.20;
+                    break;
+
+                case "02":
+                    System.out.println("BAURU SIMPLES - 1,30");
+                    total += 1.30;
+                    break;
+
+                case "03":
+                    System.out.println("BAURU COM OVO - 1,50");
+                    total += 1.50;
+                    break;
+
+                case "04":
+                    System.out.println("HAMBURGUER - 1,20");
+                    total += 1.20;
+                    break;
+
+                case "05":
+                    System.out.println("CHEESEBURGUER - 1,40");
+                    total += 1.40;
+                    break;
+
+                case "06":
+                    System.out.println("REFRIGERANTE - 1,20");
+                    total += 1.20;
+                    break;
+
+                case "0":
+                    System.out.println("Encerrando pedido...");
+                    break;
+
+                default:
+                    System.out.println("Código inválido!");
+            }
+
+        } while (!escolha.equals("0"));
+
+        System.out.printf("Total do pedido: R$ %.2f", total);
+    }
+}
