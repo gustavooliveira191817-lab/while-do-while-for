@@ -1,0 +1,27 @@
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+  Scanner e=new Scanner(System.in);
+    int cont = 0;
+    int menor = 0;
+    do {
+        System.out.println("informe o "+cont+"º numero:");
+        int num = e.nextInt();
+        if (cont == 0) {
+            menor = num;
+        } else {
+            if (num < menor) {
+                menor = num;
+            }
+        }
+        cont++;
+    }
+  while ( cont <=10 );
+        System.out.println("o menor numeor é "+menor);
+
+  }
+
+}
+
+
